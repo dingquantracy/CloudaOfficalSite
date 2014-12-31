@@ -1,0 +1,35 @@
+{% import "./hd.html" as hd %}
+{% import "./nav.html" as nav %}
+{% import "./new/topbar.html" as topbar%}
+{% import "./new/topnav.html" as topnav%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	{% include "./meta.html" %}
+	<title>Clouda+</title>
+	<link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/markdown.css">
+	<link rel="stylesheet" href="/assets/css/api.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+</head>
+<body>
+	{{ topbar.use() }}
+    {{ topnav.use() }}
+   <!--  {{ hd.use("api") }} -->
+	<section class="bd">
+        <div class="vp">
+            <aside id="menu">
+                {{ nav.use("404","","") }}
+            </aside>
+            <article id="docs" class="markdown center">
+                <h1><img src="/assets/images/ld.gif" alt=""></h1>
+                <h1>Under Construction</h1>
+                <h2>Comming Soon</h2>
+            </article>
+        </div>
+	</section>
+    {% include "./ft.html" %}
+    <script src="/assets/js/statistics.js"></script>
+</body>
+</html>

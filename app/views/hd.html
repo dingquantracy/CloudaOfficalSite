@@ -1,0 +1,32 @@
+{% macro use(active) %}
+
+
+<script type="text/javascript" src="http://passport.baidu.com/passApi/js/uni_login_wrapper.js?cdnversion=201410221525"/></script>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<header class="hd">
+    <div class="vp">
+        <div id="logo">
+        	<a href="/">
+        		<img src="/assets/images/clouda+logo.png" alt=""><span>Clouda+</span>
+        	</a>
+        </div>
+        <ul id="nav">
+            <li>
+            	<a href="/">首页</a>
+            </li>
+            <li class="apidocs">
+            	<a {% if active === "api" %}class="active"{% endif %} href="/portal/">文档<i class="fa fa-caret-down"></i></a>
+                <ul id="navlist">
+                    <li><a href="/rapid/introduction/rapid_introduction/">RapidJS</a></li>
+                    <li><a href="/blend/introduction/introduction">Blend</a></li>
+                    <li><a href="/runtime/introduction/introduce">Runtime</a></li>
+                </ul>
+            </li>
+            <li>
+            	<a href="https://github.com/Clouda-team">Github</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+{% endmacro %}

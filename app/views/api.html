@@ -1,0 +1,31 @@
+{% import "./hd.html" as hd %}
+{% import "./nav.html" as nav %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% include "./meta.html" %}
+	<title>Clouda+ Docs</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/markdown.css">
+    <link rel="stylesheet" href="/assets/css/api.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+</head>
+<body class="light">
+    {{ hd.use("api") }}
+    <section class="bd">
+        <div class="vp">
+            <aside id="menu">
+                {{ nav.use(proj,mod, doc) }}
+            </aside>
+            <article class="markdown" id="docs">
+                {{ ctnt }}
+            </article>
+        </div>
+    </section>
+    {% include "./ft.html" %}
+    <script src="/assets/js/prettify.min.js"></script>
+    <script src="/assets/js/url.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/statistics.js"></script>
+</body>
+</html>
