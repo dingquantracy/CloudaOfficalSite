@@ -1,6 +1,6 @@
 ### Notification ###
     
-    clouda.device.notification
+    Blend.device.notification
 
 本地设备通知，可设置通知、震动或蜂鸣声提示。
 

@@ -1,5 +1,5 @@
 ### Screen ###
-    clouda.device.screen
+    Blend.device.screen
 
 截屏分享
 

@@ -1,5 +1,5 @@
 ### QRCode ###
-     clouda.device.qr
+     Blend.device.qr
 
 二维码、条形码类
 

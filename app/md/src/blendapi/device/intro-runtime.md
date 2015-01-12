@@ -9,7 +9,7 @@
 - 电池（Battery）
 - 指南针 (Compass)
 - 网络连接状态(Connection)
-- 手机通讯录
+- 手机通讯录 (Concact)
 - 设备信息（Device）
 - 文件系统（FileSystem）
 - 地理位置 (Geolocation)
@@ -21,4 +21,3 @@
 - 设备通知 (Notification)
 - 二维码（QRCode）
 - 截屏分享 （Screen）
-

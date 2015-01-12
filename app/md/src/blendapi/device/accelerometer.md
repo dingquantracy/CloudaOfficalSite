@@ -1,6 +1,6 @@
 ### Accelerometer ###
 
-    clouda.device.accelerometer
+    Blend.device.accelerometer
 
 **功能描述：**
 

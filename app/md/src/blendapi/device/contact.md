@@ -1,5 +1,5 @@
 ### Contact ###
-    clouda.device.contact
+    Blend.device.contact
 
 联系人类。
 

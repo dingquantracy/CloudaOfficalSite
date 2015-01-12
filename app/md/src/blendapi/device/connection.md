@@ -7,6 +7,7 @@
 **方法：**
 
 - get(options)
+- startListen(options)
 
 <h3 class="connection"> get </h3>
 
@@ -50,4 +51,14 @@
     Blend.device.CONNECTION_STATUS.CELL_4G // 移动数据4G连通状态
     Blend.device.CONNECTION_STATUS.CELL // 移动数据通连通状态
     Blend.device.CONNECTION_STATUS.ETHERNET // 以太网连通状态
+
+    startListen(options)
+
+**功能描述：**
+
+监听当前网络状态
+
+**参数说明：**
+
+- options 是一个object，同get(options)中的options说明。
 

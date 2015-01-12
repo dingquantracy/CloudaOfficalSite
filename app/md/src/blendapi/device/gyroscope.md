@@ -1,5 +1,5 @@
 ### Gyroscope ###
-    clouda.device.gyro
+    Blend.device.gyro
 
 陀螺仪感应器
 

@@ -41,8 +41,11 @@
         <td>mediaType</td>
         <td>string</td>          
         <td> 媒体类型，其值如下： <br>
-         - Blend.device.MEDIA_TYPE.IMAGE(默认) <br>
-         - Blend.device.MEDIA_TYPE.VIDEO</td>  
+         - Blend.device.MEDIA_TYPE.PICTURE(默认) <br>
+         - Blend.device.MEDIA_TYPE.VIDEO <br>
+         - Blend.device.MEDIA_TYPE.AUDIO <br>
+         - Blend.device.MEDIA_TYPE.ALLMEDIA
+     </td>  
     </tr>
     <tr>
         <td>source</td>

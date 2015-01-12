@@ -1,5 +1,5 @@
 ### Keybord ###
-     clouda.device.keybord
+     Blend.device.keybord
 
 键盘，键盘类
 

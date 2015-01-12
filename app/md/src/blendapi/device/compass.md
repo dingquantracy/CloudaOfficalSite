@@ -1,6 +1,6 @@
 ### Compass ###
 
-    clouda.device.compass
+    Blend.device.compass
 
 **功能描述：**
 指南针功能
@@ -39,6 +39,11 @@ options ： 为 object 类型，其中包括以下参数：
             <td>function(err){}</td>
             <td>操作失败，获取方向信息失败，返回错误码</td>  
         </tr>
+        <tr>
+            <td>frequency</td>
+            <td>integer</td>
+            <td>获取朝向信息的频率,单位是毫秒</td>  
+        </tr>        
     </tbody>
 </table>
 
