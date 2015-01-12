@@ -1,5 +1,5 @@
-### MediaPlayer ###
-    clouda.mbaas.mediaplayer
+### Player ###
+    clouda.mbaas.player
 
 播放器
 
@@ -29,7 +29,7 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>播放成功，返回SUCCESS状态码</td>  
+            <td>播放成功，返回SUCCESS状态码1</td>  
         </tr>
         <tr>
             <td>onfail</td>

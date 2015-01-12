@@ -29,7 +29,7 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>操作成功，返回SUCCESS状态码</td>  
+            <td>操作成功，data为"OK"，表明朗读成功。</td>  
         </tr>
         <tr>
             <td>onfail</td>
@@ -40,9 +40,9 @@
             <td>type</td>
             <td>number</td>            
             <td>朗读文本的语音类型：<br>
-            - clouda.mbaas.tts.TYPE_DICT_US ： 美式英语发音<br>
-            - clouda.mbaas.tts.TYPE_DICT_UK ： 英式英语发音<br>
-            - clouda.mbaas.tts.TYPE_DICT_ZH ： 中文发音<br>
+            - Blend.mbaas.tts.TYPE_DICT_US ： 美式英语发音<br>
+            - Blend.mbaas.tts.TYPE_DICT_UK ： 英式英语发音<br>
+            - Blend.mbaas.tts.TYPE_DICT_ZH ： 中文发音<br>
         </td>  
         </tr>
     </tbody>

@@ -1,6 +1,6 @@
 ### VTT ###
 
-    clouda.mbaas.vtt
+    Blend.mbaas.vtt
 
 语音识别服务
 开发轻应用前，需要先申请语音服务的ak，sk和pid，并执行初始化init方法
@@ -42,21 +42,21 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>识别成功，返回语音文字字符串</td>  
+            <td>识别成功，data是对象，其中voice_result 字段对应的是识别的结果，包括录音时间，是别的文字字符串等</td>  
         </tr>
         <tr>
             <td>onfail</td>
             <td>function(err){}</td>          
-            <td>识别失败<br>
-            - clouda.mbaas.VTT_STATUS.FAILED ：语音识别失败
+            <td>识别失败，result为1表示识别失败，error_code 表明不同的错误类型。<br>
+     
             </td>  
         </tr>
         <tr>
             <td>speechMode</td>
             <td>int</td>            
             <td>设置识别模式，可选，其参数如下：<br>
-            - clouda.mbaas.VTT_SPEECHMODE.SEARCH ：搜索模式 （默认）<br>
-            - clouda.mbaas.VTT_SPEECHMODE.INPUT  ：文本输入模式
+            - Blend.mbaas.VTT_SPEECHMODE.SEARCH ：搜索模式 （默认）<br>
+            - Blend.mbaas.VTT_SPEECHMODE.INPUT  ：文本输入模式
         </td>  
         </tr>
         <tr>
@@ -74,8 +74,8 @@
             <td>sampleRate</td>
             <td>int</td>            
             <td>语音识别录音采样率（可选），其参数如下：<br>
-            - clouda.mbaas.VTT_RATE.K8 ： （采样率8k）<br>
-            - clouda.mbaas.VTT_RATE.K16  ：（采样率16k）</td>  
+            - Blend.mbaas.VTT_RATE.K8 ： （采样率8k）<br>
+            - Blend.mbaas.VTT_RATE.K16  ：（采样率16k）</td>  
         </tr>
     </tbody>
 </table>

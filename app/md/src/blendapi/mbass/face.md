@@ -1,5 +1,5 @@
 ### FaceRecognition ###
-    clouda.mbaas.face
+    Blend.mbaas.face
 
 人脸识别
 
@@ -33,7 +33,7 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>注册成功，返回SUCCESS状态码</td>  
+            <td>注册成功，返回SUCCESS状态码1</td>  
         </tr>
         <tr>
             <td>onfail</td>
@@ -65,7 +65,7 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>验证成功，返回SUCCESS状态码</td>  
+            <td>验证成功，返回SUCCESS状态码1</td>  
         </tr>
         <tr>
             <td>onfail</td>
@@ -97,7 +97,7 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>操作成功，返回SUCCESS状态码，存在眨眼情况</td>  
+            <td>操作成功，返回SUCCESS状态码1，存在眨眼情况</td>  
         </tr>
         <tr>
             <td>onfail</td>
@@ -129,7 +129,7 @@
         <tr>
             <td>onsuccess</td>
             <td>function(data){}</td>            
-            <td>绑定成功，返回SUCCESS状态码</td>  
+            <td>绑定成功，返回SUCCESS状态码1</td>  
         </tr>
         <tr>
             <td>onfail</td>

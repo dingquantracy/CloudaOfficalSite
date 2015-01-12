@@ -1,5 +1,5 @@
 ### App ###
-    clouda.mbaas.app
+    Blend.mbaas.app
 
 轻应用订阅相关接口
 订阅及检测是否已订阅
@@ -47,7 +47,7 @@ onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
 onfail | function(err){} | 操作失败，返回错误码信息 
 
 #### checkFollow 
-  followSite(appid,options)
+  checkFollow(appid,options)
 
 **功能描述：** 
 
@@ -61,7 +61,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 
 参数 | 类型 | 描述 
 ------------ | ------------- | ------------
-onsuccess | function(data){} | 操作成功，返回关注信息状态码
+onsuccess | function(stateCode){} | 操作成功，返回关注信息状态码
 onfail | function(err){} | 操作失败，返回错误码信息 
 
 **返回的关注信息状态码：**
