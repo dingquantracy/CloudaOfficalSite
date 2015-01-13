@@ -16,7 +16,18 @@ document.addEventListener("DOMContentLoaded", function(){
 	var pres = document.querySelectorAll("pre");
 	if(pres.length){
 		[].forEach.call(pres, function(pre){
-			pre.classList.add("prettyprint");
+			if(pre.classList){
+				pre.classList.add("prettyprint");
+			}else{
+				var classNames = [];
+				if(pre.className){
+					classNames = pre.className.split(/\s+/);
+					classNames.push("prettyprint");
+					pre.className = classNames.join(" ");
+				}else{
+					pre.className = "prettyprint";
+				}
+			}
 		});	
 		prettyPrint();
 	}
