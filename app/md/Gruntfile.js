@@ -27,7 +27,7 @@ module.exports = function(grunt) {
               "<%=pkg.device%>qr.md",
               "<%=pkg.device%>screen.md "
             ],
-            dest: 'blendapi/local/runtime.md'
+            dest: 'blendapi/local/api_runtime.md'
           }]
         },
         "mbass":{
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
               "<%=pkg.mbass%>vtt.md",
 	            "<%=pkg.mbass%>cache.md"
             ],
-            dest: 'blendapi/cloud/runtime.md'
+            dest: 'blendapi/cloud/api_runtime.md'
           }] 
         },
         "device-kuang":{
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
               "<%=pkg.device%>qr.md",
               "<%=pkg.device%>keybord.md"
             ],
-            dest: 'blendapi/local/kuang.md'
+            dest: 'blendapi/local/api_kuang.md'
           }]          
         },
         "mbass-kuang":{
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
               "<%=pkg.mbass%>socialshare.md",
               "<%=pkg.mbass%>push.md"
             ],
-            dest: 'blendapi/cloud/kuang.md'
+            dest: 'blendapi/cloud/api_kuang.md'
           }]          
         }
     }
