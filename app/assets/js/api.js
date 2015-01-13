@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			docs.insertBefore(arch, h1.nextSibling);
 		}
 	}
-	if(url(3) === "api_document" || url(3) === "runtime"){
+	if(url(3) === "api_document" || url(3) === "runtime" ||url(3) === "api_runtime"||url(3) === "api_kuang"){
 		archive(true);	
 	} else {
 		archive();
