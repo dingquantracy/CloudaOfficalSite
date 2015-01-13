@@ -8,18 +8,19 @@
 
 - say(word, options)
 
-<h3 class="tts">say<h3>
+<h3 class="tts">say</h3>
 	
 	say(word, options)
 
-**功能描述：**
+**功能描述:**
 
 启动文本语音功能
 
-**参数说明：**
 
--	word： string类型，文本信息
--	options:object类型，其中包括以下参数：
+**参数说明:**
+
+- word: string类型，文本信息
+- options: object类型，其中包括以下参数：
 
 
 <table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
@@ -50,3 +51,5 @@
         </tr>
     </tbody>
 </table>
+
+
