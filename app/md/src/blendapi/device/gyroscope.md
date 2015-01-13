@@ -1,4 +1,4 @@
-### Gyroscope ###
+## Gyroscope ##
     Blend.device.gyro
 
 陀螺仪感应器
@@ -9,8 +9,9 @@
 - startListen(options)
 - stopListen()
 
-#### get ####
-get(options)
+<h3 class="gyroscope"> get</h3>
+
+    get(options)
 
 **功能描述：**
 
@@ -78,7 +79,7 @@ get(options)
     <tbody>
 </table>
 
-#### startListen ####
+<h3 class="gyroscope"> startListen</h3>
 
     startListen(options)
 
@@ -90,7 +91,7 @@ get(options)
 
 同get(options)中的参数说明。
 
-#### stopListen ####
+<h3 class="gyroscope"> stopListen</h3>
 
     stopListen()
 

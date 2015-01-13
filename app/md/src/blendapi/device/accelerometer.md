@@ -1,4 +1,4 @@
-### Accelerometer ###
+## Accelerometer ##
 
     Blend.device.accelerometer
 
@@ -12,7 +12,8 @@
 - startListen(options)
 - stopListen()
 
-#### get ####
+<h3 class="accelerometer"> get</h3>
+
     get(options)
 
 **功能描述：**
@@ -81,7 +82,7 @@
     <tbody>
 </table>
 
-#### startListen ####
+<h3 class="accelerometer"> startListen</h3>
 
     startListen(options)
 
@@ -94,7 +95,7 @@
 同get(options)中的参数说明。
 
 
-#### stopListen ####
+<h3 class="accelerometer"> stopListen</h3>
 
     stopListen()
 

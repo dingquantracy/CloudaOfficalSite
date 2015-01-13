@@ -1,4 +1,4 @@
-### QRCode ###
+## QRCode ##
      Blend.device.qr
 
 二维码、条形码类
@@ -7,9 +7,9 @@
 
 - startCapture(options)
 
-#### startCapture ####
+<h3 class="qrcode"> startCapture</h3>
 
-    startCapture(options)
+	startCapture(options)
 
 **功能描述：**
 

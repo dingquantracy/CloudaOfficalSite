@@ -1,4 +1,4 @@
-### Compass ###
+## Compass ##
 
     Blend.device.compass
 
@@ -11,7 +11,8 @@
 - startListen(options)
 - stopListen()
 
-#### get ####
+<h3 class="compass"> get</h3>
+
     get(options)
 
 **功能描述：**
@@ -79,7 +80,8 @@ options ： 为 object 类型，其中包括以下参数：
     <tbody>
 </table>
 
-#### startListen ####
+<h3 class="compass"> startListen</h3>
+
     startListen(options)
 
 **功能描述：**
@@ -115,7 +117,8 @@ options是一个对象，其中包括以下参数：
     </tbody>
 </table>
 
-#### stopListen ####
+<h3 class="compass"> stopListen</h3>
+
     stopListen()
 
 **功能描述：**

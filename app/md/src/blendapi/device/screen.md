@@ -1,4 +1,4 @@
-### Screen ###
+## Screen ##
     Blend.device.screen
 
 截屏分享
@@ -9,7 +9,8 @@
 - shareImage(data, options)
 - shareScreen(options)
 
-#### captureScreen ####
+<h3 class="screen"> capture</h3>
+
     capture(options)
 
 **功能描述：**
@@ -41,7 +42,8 @@
 </table>
 
 
-#### shareImage ####
+<h3 class="screen"> shareImage</h3>
+
     shareImage(data, options)
 
 **功能描述：**
@@ -73,7 +75,8 @@
     </tbody>
 </table>
 
-#### shareScreen ####
+<h3 class="screen"> shareScreen</h3>
+
     shareScreen(options)
 
 **功能描述：**

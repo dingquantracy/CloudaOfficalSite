@@ -1,4 +1,4 @@
-### Notification ###
+## Notification ##
     
     Blend.device.notification
 
@@ -18,7 +18,8 @@
 - updateProgress(value)
 - stopProgress()
 
-#### alert ####
+<h3 class="notification"> alert</h3>
+
     alert(msg, options)
 
 **功能描述：**
@@ -59,7 +60,8 @@
     </tbody>
 </table>
 
-#### confirm ####
+<h3 class="notification"> confirm</h3>
+
     confirm(msg, options)
 
 **功能描述：**
@@ -100,7 +102,8 @@
     </tbody>
 </table>
 
-#### beep ####
+<h3 class="notification"> beep</h3>
+
     beep(time)
 
 **功能描述：**
@@ -111,7 +114,8 @@
 
 - time : 为 int 类型， 蜂鸣的持续时间，单位：毫秒
 
-#### vibrate ####
+<h3 class="notification"> vibrate</h3>
+
     vibrate(time)
 
 **功能描述：**
@@ -122,7 +126,8 @@
 
 - time ： 为 int 类型， 设备震动时长，单位： 毫秒
 
-#### prompt ####
+<h3 class="notification"> prompt</h3>
+
     prompt(msg, options)
 
 **功能描述：**
@@ -167,7 +172,8 @@
     </tbody>
 </table>
 
-#### startLoad ####
+<h3 class="notification"> startLoad</h3>
+
     startLoad(title, msg, options)
 
 **功能描述：**
@@ -200,7 +206,8 @@
     </tbody>
 </table>
 
-#### stopLoad ####
+<h3 class="notification"> stopLoad</h3>
+
     stopLoad(options)
 
 **功能描述：**
@@ -231,7 +238,8 @@
     </tbody>
 </table>
 
-#### progress ####
+<h3 class="notification"> progress</h3>
+
     progress(title, msg, options)
 
 **功能描述：**
@@ -264,7 +272,8 @@
     </tbody>
 </table>
 
-#### startProgress #### 
+<h3 class="notification"> startProgress</h3> 
+
     startProgress(title, msg, options)
 
 **功能描述：**
@@ -297,7 +306,8 @@
     </tbody>
 </table>
 
-#### updateProgress #### 
+<h3 class="notification"> updateProgress</h3> 
+
     updateProgress(value)
 
 **功能描述：**
@@ -308,7 +318,8 @@
 
 - value : 为 int 类型，取值范围为[0,100]，进度数值
 
-#### stopProgress #### 
+<h3 class="notification"> stopProgress</h3> 
+
     stopProgress()
 
 **功能描述：**

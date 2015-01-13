@@ -1,4 +1,4 @@
-### Contact ###
+## Contact ##
     Blend.device.contact
 
 联系人类。
@@ -12,7 +12,8 @@
 - update(contact, data, options)
 - remove(contact, options)
 
-#### find ####
+<h3 class="contact"> find</h3>
+
     find(field, options)
 
 **功能描述：**
@@ -252,7 +253,8 @@
     </tbody>
 </table>
 
-#### count ####
+<h3 class="count"> count</h3>
+
     count(options)
 
 **功能描述：**
@@ -263,7 +265,8 @@
 
 options: 为object，参数说明同find(field, options)中的options说明。
 
-#### getCursor ####
+<h3 class="count"> getCursor</h3>
+
     getCursor(field, cursorOffset, length， options)
 
 **功能描述：**
@@ -278,7 +281,8 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - options：
    参数说明同find(field, options)中的options说明。
 
-#### insert ####
+<h3 class="count"> insert</h3>
+
     insert(data, options)
 
 **功能描述：**
@@ -290,7 +294,8 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - data： find(field, options)接口中返回的“Contact对象”中的data信息。
 - options：参数说明同clouda.device.contact.find(field, options)中的options说明。
 
-#### update ####
+<h3 class="count"> update</h3>
+
     update(contact, data, options)
 
 **功能描述：**
@@ -303,7 +308,8 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - data： find(field, options)接口中返回的Contact对象中的data信息。
 - options：参数说明同clouda.device.contact.find(field, options)中的options说明。
 
-#### remove ####
+<h3 class="count"> remove</h3>
+
     remove(contact, options)
 
 **功能描述：**

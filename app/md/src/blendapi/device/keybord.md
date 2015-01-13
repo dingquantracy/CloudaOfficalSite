@@ -1,4 +1,4 @@
-### Keybord ###
+## Keybord ##
      Blend.device.keybord
 
 键盘，键盘类
@@ -11,7 +11,7 @@
 - close(options)
 
 
-#### startListen ####
+<h3 class="keybord"> startListen</h3>
 
     startListen(options)
 
@@ -36,7 +36,7 @@ show | number | 0 是隐藏， 1是显示
 height | number | 键盘的高度，单位像素
 
 
-#### stopListen ####
+<h3 class="keybord"> stopListen</h3>
 
     stopListen(options)
 
@@ -52,7 +52,7 @@ onsuccess | function(data){} | 停止监听成功，返回 success状态码
 onfail | function(err){} | 停止监听失败，返回错误码
 
 
-#### open ####
+<h3 class="keybord"> open</h3>
 
     open(options)
 
@@ -68,7 +68,7 @@ onsuccess | function(data){} | 打开键盘成功，返回 键盘信息对象
 onfail | function(err){} | 打开键盘失败，返回错误码
 
 
-#### close ####
+<h3 class="keybord"> close</h3>
 
     close(options)
 
