@@ -8,16 +8,16 @@
 
 - say(word, options)
 
-<h3 class="tts">say<h3>
+<h3 class="tts">say</h3>
 	
 	say(word, options)
 
-**功能描述：**
+**功能描述:**
 
 启动文本语音功能
 
-__ 参数说明: __
 
+**参数说明:**
 
 - word: string类型，文本信息
 - options: object类型，其中包括以下参数：
