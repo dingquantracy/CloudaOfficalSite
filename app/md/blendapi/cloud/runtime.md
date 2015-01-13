@@ -1130,11 +1130,11 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onprogress | function(status){} | 返回上传进度Progress对象
 asStream | boolean | 可选参数，默认是false
 codecType | string | 可选参数，默认为空，可选值如下：
-         - clouda.mbaas.CODEC_TYPE.M320
-         - clouda.mbaas.CODEC_TYPE.M480224
-         - clouda.mbaas.CODEC_TYPE.M480360
-         - clouda.mbaas.CODEC_TYPE.M640
-         - clouda.mbaas.CODEC_TYPE.M854
+- clouda.mbaas.CODEC_TYPE.M320
+- clouda.mbaas.CODEC_TYPE.M480224
+- clouda.mbaas.CODEC_TYPE.M480360
+- clouda.mbaas.CODEC_TYPE.M640
+- clouda.mbaas.CODEC_TYPE.M854
 
 
 <h3 class="个人云存储">deleteFiles</h3>
@@ -1156,6 +1156,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 
 
 <h3 class="个人云存储">getMeta</h3>
+
 	getMeta(path,options)
 
 
@@ -1187,8 +1188,9 @@ mediaType | int | 媒体类型
 cTime | string | 创建时间戳
 size | int | 文件大小，单位字节
 
-#### getList ####
-    getList(path,options)
+<h3 class="个人云存储">getList</h3>
+	
+	getList(path,options)
 
 
 **功能描述：**
@@ -1207,8 +1209,8 @@ order | string | 可选参数asc,desc
 by | string | 可选参数time,size
 
 
-#### getListByCategory ####
-    getListByCategory(mediaType,options)
+<h3 class="个人云存储">getListByCategory</h3>
+	getListByCategory(mediaType,options)
 
 **功能描述：**
 
@@ -1228,8 +1230,9 @@ onsuccess | function(data){} | 操作成功，返回文件列表，由Meta对象
 onfail | function(err){} | 操作失败，返回错误码信息
 
 
-#### getStreamingURL ####
-    getStreamingURL(serverpath,codeType,options)
+<h3 class="个人云存储">getStreamingURL</h3>
+	
+	getStreamingURL(serverpath,codeType,options)
 
 
 **功能描述：**
@@ -1249,8 +1252,9 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回文件流信息
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### search ####
-    search(serverpath,key,recursive,options)
+<h3 class="个人云存储">search</h3>
+	
+	search(serverpath,key,recursive,options)
 
 **功能描述：**
 
@@ -1267,8 +1271,9 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回文件列表，由Meta对象组成的数组
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### thumbnail ####
-    thumbnail(serverpath,options)
+<h3 class="个人云存储">thumbnail</h3>
+
+	thumbnail(serverpath,options)
 
 **功能描述：**
 
@@ -1286,8 +1291,9 @@ quality | int | 0-100 缩略图品质
 width | int | 缩略图宽度，单位像素
 height | int | 缩略图高度，单位像素
 
-#### move ####
-    move(patharr,options)
+<h3 class="个人云存储">move</h3>
+	
+	move(patharr,options)
 
 **功能描述：**
 
@@ -1310,8 +1316,9 @@ to | string | 目标地址的绝对路径
 onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### rename ####
-    rename(patharr,options)
+<h3 class="个人云存储">rename</h3>
+	
+	rename(patharr,options)
 
 **功能描述：**
 
@@ -1333,8 +1340,9 @@ newName | string | 新文件名
 onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### copy ####
-    copy(patharr,options)
+<h3 class="个人云存储">copy</h3>
+	
+	copy(patharr,options)
 
 **功能描述：**
 
@@ -1358,8 +1366,9 @@ onfail | function(err){} | 操作失败，返回错误码信息
 
 
 
-#### createFileLink ####
-    createFileLink(path,options)
+<h3 class="个人云存储">createFileLink</h3>
+	
+	createFileLink(path,options)
 
 **功能描述：**
 
@@ -1374,8 +1383,9 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### deleteFileLink ####
-    deleteFileLink(path,options)
+<h3 class="个人云存储">deleteFileLink</h3>
+	
+	deleteFileLink(path,options)
 
 **功能描述：**
 
@@ -1392,8 +1402,9 @@ onfail | function(err){} | 操作失败，返回错误码信息
 
 
 
-#### cloudMatch ####
-    cloudMatch(localpath,serverpath,options)
+<h3 class="个人云存储">cloudMatch</h3>
+	
+	cloudMatch(localpath,serverpath,options)
 
 **功能描述：**
 
@@ -1409,8 +1420,9 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回是否匹配
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### cloudMatchAndUploadFile ####
-    cloudMatchAndUploadFile(localpath,serverpath,options)
+<h3 class="个人云存储">cloudMatchAndUploadFile</h3>
+	
+	cloudMatchAndUploadFile(localpath,serverpath,options)
 
 **功能描述：**
 
@@ -1435,8 +1447,10 @@ onprogress | function(status){} | 返回上传进度Progress对象
 progress | int | 已上传的大小，单位字节
 total | int | 空间总大小，单位字节
 
-#### listRecycle ####
-    listRecycle(options)
+<h3 class="个人云存储">listRecycle</h3>
+	
+	listRecycle(options)
+
 **功能描述：**
 列出回收站的文件列表
 **参数说明：**
@@ -1447,8 +1461,10 @@ total | int | 空间总大小，单位字节
 onsuccess | function(data){} | 操作成功，返回文件列表，由Meta对象组成的数组
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### restore####
-    restore(filesukarr,options)
+<h3 class="个人云存储">restore</h3>
+	
+	restore(filesukarr,options)
+    
 **功能描述：**
 回收站还原文件，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1460,8 +1476,10 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回成功信息
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### cleanRecycle ####
-    cleanRecycle(options)
+<h3 class="个人云存储">cleanRecycle</h3>
+	
+	cleanRecycle(options)
+
 **功能描述：**
 清空回收站，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1473,8 +1491,11 @@ onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
 
-#### cloudDownload ####
-    cloudDownload(url,serverpath,options)
+
+<h3 class="个人云存储">cloudDownload</h3>
+	
+	cloudDownload(url,serverpath,options)
+
 **功能描述：**
 启动离线下载任务，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1487,8 +1508,10 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### cancelCloudDownload ####
-    cancelCloudDownload(serverpath,options)
+<h3 class="个人云存储">cancelCloudDownload</h3>
+	
+	cancelCloudDownload(serverpath,options)
+
 **功能描述：**
 取消离线下载任务，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1500,8 +1523,10 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### cloudDownloadTaskList ####
-    cloudDownloadTaskList(options)
+<h3 class="个人云存储">cloudDownloadTaskList</h3>
+	
+	cloudDownloadTaskList(options)
+	
 **功能描述：**
 获取离线下载任务列表，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1517,8 +1542,10 @@ limit | int | 列表查找句柄的个数限制
 needTaskInfo | boolean | 是否需要文件详细信息，默认true
 status | int | 0-10
 
-#### queryCloudDownloadTaskStatus ####
-    queryCloudDownloadTaskStatus(filesukarr,options)
+<h3 class="个人云存储">queryCloudDownloadTaskStatus</h3>
+	
+	queryCloudDownloadTaskStatus(filesukarr,options)
+
 **功能描述：**
 查询给定文件的离线下载状态，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1531,8 +1558,10 @@ onsuccess | function(data){} | 操作成功，返回所查询任务的状态
 onfail | function(err){} | 操作失败，返回错误码信息
 
 
-#### queryCloudDownloadTaskProgress ####
-    queryCloudDownloadTaskProgress(filesukarr,options)
+<h3 class="个人云存储">queryCloudDownloadTaskProgress</h3>
+	
+	queryCloudDownloadTaskProgress(filesukarr,options)
+
 **功能描述：**
 查询给定文件的离线下载进度，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1545,8 +1574,10 @@ onsuccess | function(data){} | 操作成功，所查询任务的进度
 onfail | function(err){} | 操作失败，返回错误码信息
 
 
-#### diff ####
-    diff(cursor,options)
+<h3 class="个人云存储">diff</h3>
+	
+	diff(cursor,options)
+
 **功能描述：**
 历史版本库变更的查询管理
 功能第一次调用时，传入的参数为null。后续调用，需要使用前一次调用返回的data.cursor作为参数传入
@@ -1647,10 +1678,10 @@ size | int | 文件大小，单位字节
 
 启动文本语音功能
 
-**参数说明：**
+**参数说明: **
 
--	word： string类型，文本信息
--	options:object类型，其中包括以下参数：
+-	word: string类型，文本信息
+- 	options: object类型，其中包括以下参数：
 
 
 <table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
@@ -1683,6 +1714,8 @@ size | int | 文件大小，单位字节
 </table>
 
 
+
+
 ## VTT ##
 
     Blend.mbaas.vtt
@@ -1695,7 +1728,7 @@ size | int | 文件大小，单位字节
 - init(ak,sk,pid)
 - showDialog(options)
 
-<h3 class="VTT">init</h3>
+<h3 class="vtt">init</h3>
 
 	init(ak,sk,pid)
 
@@ -1710,7 +1743,7 @@ size | int | 文件大小，单位字节
 - pid：所申请的语音服务的pid
 
 
-<h3 class="VTT">showDialog</h3>
+<h3 class="vtt">showDialog</h3>
 
 	showDialog(options)
 
