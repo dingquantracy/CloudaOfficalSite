@@ -1,4 +1,6 @@
-### FaceRecognition ###
+
+## Face ##
+
     Blend.mbaas.face
 
 人脸识别
@@ -11,7 +13,8 @@
 - authorizeDevice(uid, options)
 - listDevice(uid, options)
 
-#### register ####
+<h3 class="face">register</h3>
+
     register(uid, options)
 
 **功能描述：**
@@ -43,8 +46,10 @@
     </tbody>
 </table>
 
-#### verify ####
-    verify(uid, options)
+
+<h3 class="face">verify</h3>
+
+	verify(uid, options)
 
 **功能描述：**
 
@@ -75,8 +80,10 @@
     </tbody>
 </table>
 
-#### checkBlink ####
-    checkBlink(uid, options)
+
+<h3 class="face">checkBlink</h3>
+
+	checkBlink(uid, options)
 
 **功能描述：**
 
@@ -107,8 +114,10 @@
     </tbody>
 </table>
 
-#### authorizeDevice ####
-    authorizeDevice(uid, options)
+
+<h3 class="face">authorizeDevice</h3>
+
+	authorizeDevice(uid, options)
 
 **功能描述：**
 
@@ -139,8 +148,10 @@
     </tbody>
 </table>
 
-#### listDevice ####
-    listDevice(uid, options)
+
+<h3 class="face">listDevice</h3>
+
+	listDevice(uid, options)
 
 **功能描述：**
 

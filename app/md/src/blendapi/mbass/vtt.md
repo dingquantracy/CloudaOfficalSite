@@ -1,4 +1,5 @@
-### VTT ###
+
+## VTT ##
 
     Blend.mbaas.vtt
 
@@ -10,8 +11,9 @@
 - init(ak,sk,pid)
 - showDialog(options)
 
-#### init ####
-    init(ak,sk,pid)
+<h3 class="VTT">init</h3>
+
+	init(ak,sk,pid)
 
 **功能描述：**
 
@@ -23,8 +25,10 @@
 - sk ：所申请的语音服务的sk
 - pid：所申请的语音服务的pid
 
-#### showDialog ####
-    showDialog(options)
+
+<h3 class="VTT">showDialog</h3>
+
+	showDialog(options)
 
 **功能描述：**
 

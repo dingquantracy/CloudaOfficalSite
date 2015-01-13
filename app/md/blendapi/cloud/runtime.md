@@ -12,6 +12,9 @@
 - 播放器 (Player)
 - 文本转语音 (TTS)
 - 语音识别 (VTT)
+- 离线存储 (Cache)
+
+
 ## Account
 
     Blend.mbaas.account
@@ -60,6 +63,7 @@ onfail | function(){}  | 登录失败的回调函数. onfail函数体中,需要�
 
 1.  redirect_uri是登录成功后的回跳地址，不建议在redirec_rui的页面中处理太多逻辑，如果有，在百度App的轻应用环境下要实现回跳页和其他页面的数据通信，请使用localStorage或者cookie来实现。
 2.  为了兼容web版的登陆功能，应该在window上注册全局的成功和失败的回调函数，window.onsuccess=function(data){Blend.mbaas.account.closeLoginDialog();};并且在回调函数中人为地关闭登录浮层，并且在redirect_uri指定的页面中调用父层的全局回调函数。
+
 ## 轻支付
 
     Blend.mbaas.pay
@@ -277,6 +281,7 @@ goods_channel | 数字商品渠道 | 商户与渠道商提前约定好，字符�
 取值 | 含义
 ---------- | ------------- 
 1 | GBK
+
 ## Socialshare ##
     Blend.mbaas.socialshare
 
@@ -327,6 +332,7 @@ renren | 人人网
 qqfriend | QQ好友
 sms | 短信
 email | 邮件
+
 ## Push ##
 
     Blend.mbaas.push
@@ -707,7 +713,9 @@ options：为object类型，其中包括以下参数：
         </tr>
     </tbody>
 </table>
-### App ###
+
+
+## App ##
     Blend.mbaas.app
 
 轻应用订阅相关接口
@@ -737,8 +745,9 @@ onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
 onfail | function(err){} | 操作失败，返回错误码信息 -->
 
 
-#### followSite 
-  followSite(appid,options)
+<h3 class="app">followSite</h3>
+
+	followSite(appid,options)
 
 **功能描述：** 
 
@@ -753,10 +762,11 @@ onfail | function(err){} | 操作失败，返回错误码信息 -->
 参数 | 类型 | 描述 
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
-onfail | function(err){} | 操作失败，返回错误码信息 
+onfail | function(err){} | 操作失败，返回错误码信息
 
-#### checkFollow 
-  checkFollow(appid,options)
+<h3 class="app">checkFollow</h3>
+
+	checkFollow(appid,options)
 
 **功能描述：** 
 
@@ -783,7 +793,11 @@ stateCode | 描述
 2 | 添加中
 
 
-### FaceRecognition ###
+
+
+
+## Face ##
+
     Blend.mbaas.face
 
 人脸识别
@@ -796,7 +810,8 @@ stateCode | 描述
 - authorizeDevice(uid, options)
 - listDevice(uid, options)
 
-#### register ####
+<h3 class="face">register</h3>
+
     register(uid, options)
 
 **功能描述：**
@@ -828,8 +843,10 @@ stateCode | 描述
     </tbody>
 </table>
 
-#### verify ####
-    verify(uid, options)
+
+<h3 class="face">verify</h3>
+
+	verify(uid, options)
 
 **功能描述：**
 
@@ -860,8 +877,10 @@ stateCode | 描述
     </tbody>
 </table>
 
-#### checkBlink ####
-    checkBlink(uid, options)
+
+<h3 class="face">checkBlink</h3>
+
+	checkBlink(uid, options)
 
 **功能描述：**
 
@@ -892,8 +911,10 @@ stateCode | 描述
     </tbody>
 </table>
 
-#### authorizeDevice ####
-    authorizeDevice(uid, options)
+
+<h3 class="face">authorizeDevice</h3>
+
+	authorizeDevice(uid, options)
 
 **功能描述：**
 
@@ -924,8 +945,10 @@ stateCode | 描述
     </tbody>
 </table>
 
-#### listDevice ####
-    listDevice(uid, options)
+
+<h3 class="face">listDevice</h3>
+
+	listDevice(uid, options)
 
 **功能描述：**
 
@@ -955,8 +978,11 @@ stateCode | 描述
         </tr>
     </tbody>
 </table>
-### 个人云存储(PCS) ###
-    clouda.mbaas.pcs
+
+
+## 个人云存储 ##
+
+	Blend.mbaas.pcs
 
 使用PCS接口实现文件上传，文件操作，文件下载，离线下载等功能，步骤如下：
 
@@ -995,8 +1021,9 @@ stateCode | 描述
 - diff(cursor,options)
 
 
-#### init####
-    init(token,options)
+<h3 class="个人云存储">init</h3>
+
+	init(token,options)
 
 **功能描述：**
 
@@ -1012,8 +1039,10 @@ stateCode | 描述
 onsuccess | function(data){} | 操作成功，返回登录用户信息
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### mkdir ####
-    mkdir(path,options)
+
+<h3 class="个人云存储">mkdir</h3>
+
+	mkdir(path,options)
 
 **功能描述：**
 
@@ -1028,8 +1057,10 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 操作成功，返回成功状态码
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### getQuota ####
-    getQuota(options)
+
+<h3 class="个人云存储">getQuota</h3>
+
+	getQuota(options)
 
 **功能描述：**
 
@@ -1053,8 +1084,9 @@ used | int | 已使用空间，单位字节
 total | int | 空间总大小，单位字节
 
 
-#### uploadFile ####
-    uploadFile(localpath,serverpath,options)
+<h3 class="个人云存储">uploadFile</h3>
+
+	uploadFile(localpath,serverpath,options)
 
 **功能描述：**
 
@@ -1080,8 +1112,10 @@ progress | int | 已上传的大小，单位字节
 total | int | 空间总大小，单位字节
 
 
-#### downloadFile ####
-    downloadFile(serverpath,localpath,options)
+<h3 class="个人云存储">downloadFile</h3>
+
+	downloadFile(serverpath,localpath,options)
+
 **功能描述：**
 下载文件到本地，权限仅限于token所获得的路径下`/apps/your_app_dir/`
 **参数说明：**
@@ -1103,8 +1137,9 @@ codecType | string | 可选参数，默认为空，可选值如下：
          - clouda.mbaas.CODEC_TYPE.M854
 
 
-#### deleteFiles ####
-    deleteFiles(patharr,options)
+<h3 class="个人云存储">deleteFiles</h3>
+
+	deleteFiles(patharr,options)
 
 **功能描述：**
 
@@ -1119,8 +1154,9 @@ codecType | string | 可选参数，默认为空，可选值如下：
 onsuccess | function(data){} | 操作成功，返回登录用户信息
 onfail | function(err){} | 操作失败，返回错误码信息
 
-#### getMeta ####
-    getMeta(path,options)
+
+<h3 class="个人云存储">getMeta</h3>
+	getMeta(path,options)
 
 
 **功能描述：**
@@ -1547,8 +1583,10 @@ mediaType | int | 媒体类型
 cTime | string | 创建时间戳
 size | int | 文件大小，单位字节
 
-### Player ###
-    clouda.mbaas.player
+
+## Player ##
+
+	Blend.mbaas.player
 
 播放器
 
@@ -1556,8 +1594,9 @@ size | int | 文件大小，单位字节
 
 - play(link, options)
 
-#### play ####
-    play(link, options)
+<h3 class="player">play</h3>
+	
+	play(link, options)
 
 **功能描述：**
 
@@ -1588,8 +1627,11 @@ size | int | 文件大小，单位字节
     </tbody>
 </table>
 
-### TTS ###
-    clouda.mbaas.tts
+
+
+## TTS ##
+
+	Blend.mbaas.tts
 
 文本发音类
 
@@ -1597,8 +1639,9 @@ size | int | 文件大小，单位字节
 
 - say(word, options)
 
-#### say ####
-    say(word, options)
+<h3 class="tts">say<h3>
+	
+	say(word, options)
 
 **功能描述：**
 
@@ -1606,8 +1649,9 @@ size | int | 文件大小，单位字节
 
 **参数说明：**
 
-- word： string类型，文本信息
-- options： object类型，其中包括以下参数：
+-	word： string类型，文本信息
+-	options:object类型，其中包括以下参数：
+
 
 <table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
     <tbody>
@@ -1637,7 +1681,9 @@ size | int | 文件大小，单位字节
         </tr>
     </tbody>
 </table>
-### VTT ###
+
+
+## VTT ##
 
     Blend.mbaas.vtt
 
@@ -1649,8 +1695,9 @@ size | int | 文件大小，单位字节
 - init(ak,sk,pid)
 - showDialog(options)
 
-#### init ####
-    init(ak,sk,pid)
+<h3 class="VTT">init</h3>
+
+	init(ak,sk,pid)
 
 **功能描述：**
 
@@ -1662,8 +1709,10 @@ size | int | 文件大小，单位字节
 - sk ：所申请的语音服务的sk
 - pid：所申请的语音服务的pid
 
-#### showDialog ####
-    showDialog(options)
+
+<h3 class="VTT">showDialog</h3>
+
+	showDialog(options)
 
 **功能描述：**
 
@@ -1718,3 +1767,148 @@ size | int | 文件大小，单位字节
         </tr>
     </tbody>
 </table>
+
+
+## Cache ##
+
+	Blend.mbaas.cache
+	
+离线存储，缓存指定的url，使得webapp在离线状态下也能像native App下
+
+**方法**
+
+-	set(options)
+-	remove(options)
+-	&lt;meta&gt;标签
+
+<h3 class="cache">set</h3>
+
+	set(options)
+	
+**功能描述**
+
+页面加载，直接调用该API，可以将指定url资源下载到本地，并且将url和本地路径存放作为key-value存放在拦截列表当中。下次访问时就会优先使用缓存资源。
+
+
+**参数说明**
+- options是一个object，其中包括以下参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <th>参数</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td>function(data){}</td>  
+            <td>成功回调用函数</td>  
+        </tr>
+        <tr>
+            <td>onfail</td>
+            <td>function(err){}</td>
+            <td>失败回调函数,参数为</td>   
+        </tr>
+         <tr>
+            <td>url</td>
+            <td>string</td>
+            <td>需要缓存资源的url</td>   
+        </tr>
+         <tr>
+            <td>filedata</td>
+            <td>int</td>
+            <td>拦截类型，1表示无论网络环境，对于存在于拦截列表中的url进行拦截，使用缓存资源，2表示对于仅仅网络离线或者2G的时候对url进行拦截，在web在线时候不进行拦截。</td>   
+        </tr>
+    </tbody>
+</table>
+
+**成功回调返回的data对象**
+	
+	{
+		error_code:0,
+		error_msg:"",
+		response:""
+	}
+
+
+**失败回调返回的错误对象err**
+	
+	{
+		error_code:1,
+		error_msg:"",
+		response:""
+	}
+
+
+
+<h3 class="cache">remove</h3>
+
+	remove(options)
+	
+**功能描述**
+
+删除url对应的本地文件，并且把拦截列表中的对应关系删除。
+
+**参数说明**
+- options是一个object，其中包括以下参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <th>参数</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td>function(data){}</td>  
+            <td>成功回掉函数</td>  
+        </tr>
+        <tr>
+            <td>onfail</td>
+            <td>function(err){}</td>
+            <td>失败回调函数,参数为</td>   
+        </tr>
+         <tr>
+            <td>url</td>
+            <td>string</td>
+            <td>需要缓存资源的url</td>   
+        </tr>
+         <tr>
+            <td>filedata</td>
+            <td>int</td>
+            <td>拦截类型，1表示无论网络环境，对于存在于拦截列表中的url进行拦截，使用缓存资源，2表示对于仅仅网络离线或者2G的时候对url进行拦截，在web在线时候不进行拦截。</td>   
+        </tr>
+    </tbody>
+</table>
+
+**成功回调返回的data对象**
+	
+	{
+		error_code:0,
+		error_msg:"",
+		response:""
+	}
+
+
+**失败回调返回的错误对象err**
+	
+	{
+		error_code:1,
+		error_msg:"",
+		response:""
+	}
+
+
+
+
+
+<h3 class="cache">&lt;meta&gt;标签</h3>
+
+页面增加&lt;meta&gt;标签 更为智能，方便。
+			
+	<meta name="Cache-Type" content="text/css;text/js;text/gif">
+
+以上代码表示对于页面的css，js，gif静态资源启动资源拦截缓存功能。
+	

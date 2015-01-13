@@ -1,4 +1,5 @@
-### App ###
+
+## App ##
     Blend.mbaas.app
 
 轻应用订阅相关接口
@@ -28,8 +29,9 @@ onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
 onfail | function(err){} | 操作失败，返回错误码信息 -->
 
 
-#### followSite 
-  followSite(appid,options)
+<h3 class="app">followSite</h3>
+
+	followSite(appid,options)
 
 **功能描述：** 
 
@@ -44,10 +46,11 @@ onfail | function(err){} | 操作失败，返回错误码信息 -->
 参数 | 类型 | 描述 
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
-onfail | function(err){} | 操作失败，返回错误码信息 
+onfail | function(err){} | 操作失败，返回错误码信息
 
-#### checkFollow 
-  checkFollow(appid,options)
+<h3 class="app">checkFollow</h3>
+
+	checkFollow(appid,options)
 
 **功能描述：** 
 
@@ -72,4 +75,5 @@ stateCode | 描述
 0 | 未添加
 1 | 已添加
 2 | 添加中
+
 

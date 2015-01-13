@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
         options: {
-          seprater: "\n\n"
+          // seprater: "\n\n"
+          separator:"\n\n"
         },
         "device":{
           files: [{
@@ -42,7 +43,8 @@ module.exports = function(grunt) {
               "<%=pkg.mbass%>pcs.md",
               "<%=pkg.mbass%>player.md",
               "<%=pkg.mbass%>tts.md",
-              "<%=pkg.mbass%>vtt.md"
+              "<%=pkg.mbass%>vtt.md",
+	            "<%=pkg.mbass%>cache.md"
             ],
             dest: 'blendapi/cloud/runtime.md'
           }] 

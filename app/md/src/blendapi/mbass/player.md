@@ -1,5 +1,6 @@
-### Player ###
-    clouda.mbaas.player
+## Player ##
+
+	Blend.mbaas.player
 
 播放器
 
@@ -7,8 +8,9 @@
 
 - play(link, options)
 
-#### play ####
-    play(link, options)
+<h3 class="player">play</h3>
+	
+	play(link, options)
 
 **功能描述：**
 
@@ -38,3 +40,4 @@
         </tr>
     </tbody>
 </table>
+

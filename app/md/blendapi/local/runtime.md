@@ -21,6 +21,7 @@
 - 设备通知 (Notification)
 - 二维码（QRCode）
 - 截屏分享 （Screen）
+
 ### Accelerometer ###
 
     Blend.device.accelerometer
@@ -126,6 +127,7 @@
 停止监听设备x,y,z轴方向的加速度信息
 
 
+
 ## Activity ##
 
     Blend.device.activity
@@ -209,6 +211,7 @@
     	};
     	Blend.device.activity.start({onsuccess:onsuccess,onfail:onfail,intent:intent});
 	}
+
 ## Battery ##
 
     Blend.device.battery
@@ -301,6 +304,7 @@
 ------------ | ------------- | ------------
 onsuccess | function(data){}  | 操作成功，返回SUCCESS状态码
 onfail | function(err){}  | 操作失败，返回错误码信息
+
 ### Compass ###
 
     Blend.device.compass
@@ -425,6 +429,7 @@ options是一个对象，其中包括以下参数：
 
 停止监听指南针信息
 
+
 ## Connection ##
 
      Blend.device.connection
@@ -488,6 +493,7 @@ options是一个对象，其中包括以下参数：
 **参数说明：**
 
 - options 是一个object，同get(options)中的options说明。
+
 
 
 ### Contact ###
@@ -807,6 +813,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - contact： 为 array 类型，即 find(field, options)接口中所返回的Contact对象中的参数所组成的数组
 - options：参数说明同find(field, options)中的options说明。
 
+
 ## Device ##
 
     Blend.device.device
@@ -920,6 +927,7 @@ height | int | 高度
 pixelDepth | int | 颜色分辨率
 colorDepth | int | 色深
 
+
 ## FileSystem ##
 
     Blend.device.fs
@@ -950,6 +958,7 @@ onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是�
 onfail | function(err){} | 操作失败，返回错误码信息
 param | object| 伴随文件上传，传递的POST数据（可选）
 uploadKey | string | 上传表单中的key
+
 ## Geolocation ##
     Blend.device.geolocation
 
@@ -1028,6 +1037,7 @@ significant | bool | 是否仅在位置发生大幅变化时进行回调，boole
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
 onfail | function(err){} | 操作失败，返回错误码信息 
+
 ## Globalization ##
     Blend.device.globalization
 
@@ -1054,6 +1064,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，返回当前用户语言，字符串格式，具体参见 [语言编码标准](http://zh.wikipedia.org/wiki/ISO_639-1)
 onfail | function(err){} | 操作失败，返回错误码信息
+
 
 ### Gyroscope ###
     Blend.device.gyro
@@ -1155,6 +1166,7 @@ get(options)
 
 停止监听设备x,y,z轴方向转动角度信息
 
+
 ### Keybord ###
      Blend.device.keybord
 
@@ -1239,6 +1251,7 @@ onfail | function(err){} | 打开键盘失败，返回错误码
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 关闭键盘成功，返回 键盘信息对象
 onfail | function(err){} | 关闭键盘失败，返回错误码
+
 
 
 ## Media ##
@@ -1366,6 +1379,7 @@ speedFF | 快进5s，操作成功返回SUCCESS状态码；操作失败，则返�
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，data返回信息，详见前述 operator 的参数说明
 onfail | function(err){} | 操作失败，返回错误码信息 
+
 ### Notification ###
     
     Blend.device.notification
@@ -1683,6 +1697,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 
 关闭进度显示
 
+
 ### QRCode ###
      Blend.device.qr
 
@@ -1712,6 +1727,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 扫描成功，返回二维码内容字符串
 onfail | function(err){} | 二维码扫描失败，返回错误码 
 type | number | 扫描对象类型 
+
 
 
 

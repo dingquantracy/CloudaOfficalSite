@@ -15,6 +15,7 @@
 - 本地媒体功能（Media）
 - 键盘（Keyboard）
 - 二维码（QRCode）
+
 ## Activity ##
 
     Blend.device.activity
@@ -98,6 +99,7 @@
     	};
     	Blend.device.activity.start({onsuccess:onsuccess,onfail:onfail,intent:intent});
 	}
+
 ## Battery ##
 
     Blend.device.battery
@@ -190,6 +192,7 @@
 ------------ | ------------- | ------------
 onsuccess | function(data){}  | 操作成功，返回SUCCESS状态码
 onfail | function(err){}  | 操作失败，返回错误码信息
+
 ## Connection ##
 
      Blend.device.connection
@@ -253,6 +256,7 @@ onfail | function(err){}  | 操作失败，返回错误码信息
 **参数说明：**
 
 - options 是一个object，同get(options)中的options说明。
+
 
 
 ## Device ##
@@ -368,6 +372,7 @@ height | int | 高度
 pixelDepth | int | 颜色分辨率
 colorDepth | int | 色深
 
+
 ## FileSystem ##
 
     Blend.device.fs
@@ -398,6 +403,7 @@ onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是�
 onfail | function(err){} | 操作失败，返回错误码信息
 param | object| 伴随文件上传，传递的POST数据（可选）
 uploadKey | string | 上传表单中的key
+
 ## Geolocation ##
     Blend.device.geolocation
 
@@ -476,6 +482,7 @@ significant | bool | 是否仅在位置发生大幅变化时进行回调，boole
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，返回SUCCESS状态码
 onfail | function(err){} | 操作失败，返回错误码信息 
+
 ## Globalization ##
     Blend.device.globalization
 
@@ -502,6 +509,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，返回当前用户语言，字符串格式，具体参见 [语言编码标准](http://zh.wikipedia.org/wiki/ISO_639-1)
 onfail | function(err){} | 操作失败，返回错误码信息
+
 
 ## Media ##
     Blend.device.media
@@ -628,6 +636,7 @@ speedFF | 快进5s，操作成功返回SUCCESS状态码；操作失败，则返�
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，data返回信息，详见前述 operator 的参数说明
 onfail | function(err){} | 操作失败，返回错误码信息 
+
 ### QRCode ###
      Blend.device.qr
 
@@ -657,6 +666,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 onsuccess | function(data){} | 扫描成功，返回二维码内容字符串
 onfail | function(err){} | 二维码扫描失败，返回错误码 
 type | number | 扫描对象类型 
+
 
 
 
