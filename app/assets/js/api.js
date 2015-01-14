@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function(){
 					e.preventDefault();
 					var offset = document.querySelector("#" + id).offsetTop;
 					// window.scrollTo(0,offset);
-					window.scrollTo(0,offset-115);
+					//window.scrollTo(0,offset-115);
+					window.scrollTo(0,offset-39);
+
 					//history.pushState("", document.title, window.location.pathname);
 				}, false);
 
