@@ -134,7 +134,7 @@ Blend能力按照模块划分，需要统一引入百度直达号的loader脚本
 
 ## 简单实例
 
-创建一个简单的运用二维码模块和ui模块的简单DEMO [点击下载](http://www.baidu.com)
+创建一个简单的运用二维码模块和ui模块的简单DEMO [点击下载](http://blend001.duapp.com/blenddemo/demo.zip)
 
 代码片段：
 
@@ -154,7 +154,7 @@ Blend能力按照模块划分，需要统一引入百度直达号的loader脚本
 
 
 		$("#Camera").bind("touchend",function(e){
-	       clouda.device.qr.startCapture({
+	       Blend.device.qr.startCapture({
 	           onsuccess:function(code){
 	                if(/^http:\/\//.test(code)){
 	                    store(code);
@@ -166,7 +166,7 @@ Blend能力按照模块划分，需要统一引入百度直达号的loader脚本
 	            onfail:function(e){
 	                console.log(e);
 	            },
-	            type:clouda.device.qr.QRCODE
+	            type:Blend.device.qr.QRCODE
 	        });
 	    });
 
