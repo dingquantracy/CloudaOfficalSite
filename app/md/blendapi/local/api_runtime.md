@@ -20,7 +20,8 @@
 - 本地媒体功能（Media）
 - 设备通知 (Notification)
 - 二维码（QRCode）
-- 截屏分享 （Screen）
+- 截屏分享 （Screen)
+-    拦截器（Interceptor）
 
 ## Accelerometer ##
 
@@ -946,11 +947,19 @@ colorDepth | int | 色深
 
 **方法：**
 
-- post(path,target,options)
+- post(path, target, options)
+- download (options)
+- remove(options)
+- clear(options)
+- getInfo (options)
+- getSurplusSize (options)
+- getMd5 (options)
+- unzip(options)
+- read(options)
 
 <h3 class="filesystem"> post </h3>
 
-    post(path,target,options)
+    post(path, target, options)
 
 **功能描述：**
 
@@ -965,9 +974,230 @@ colorDepth | int | 色深
 参数 | 类型 | 描述
 ------------ | ------------- | ------------
 onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
-onfail | function(err){} | 操作失败，返回错误码信息
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
 param | object| 伴随文件上传，传递的POST数据（可选）
 uploadKey | string | 上传表单中的key
+
+<h3 class="filesystem"> download </h3>
+
+	download(options)
+
+**功能描述：**
+
+将指定URL的文档下载保存到本地
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+url | string | url地址
+value | string | 文件保存路径
+
+- 返回的data参数说明
+
+
+	{
+		paras:{ 
+			url:xx, 
+			value:""
+		},
+		path:"本地绝对路径"
+	}
+
+<h3 class="filesystem"> remove </h3>
+
+	remove(options)
+
+**功能描述：**
+
+删除一个文件对象
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+key | string | 文件索引
+
+- 返回的data参数说明
+
+
+	{
+		paras:""  //传入的参数值,等同于key值
+	}
+	
+<h3 class="filesystem"> clear </h3>
+
+	clear(options)
+
+**功能描述：**
+
+清除本域的所有文件对象，并且将数据存储中相应的key和value删除
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+
+- 返回的data参数说明
+
+
+	{
+		paras:""  //传入的参数值
+	}
+
+<h3 class="filesystem"> getInfo </h3>
+
+	getInfo(options)
+
+**功能描述：**
+
+获取文件信息
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+key | string | 文件索引
+
+- 返回的data参数说明
+
+
+	{ 
+		{
+			paras: 这个参数代表请求参数透传回来
+		}, 
+		size: 1024 ,
+		type:"类型"
+	}
+
+<h3 class="filesystem"> getSurplusSize </h3>
+
+	getSurplusSize(options)
+
+**功能描述：**
+
+获取剩余存储空间
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+
+- 返回的data参数说明
+
+
+	{ 
+		{
+			paras: 这个参数代表请求参数透传回来
+		}, 
+		size: 1024 //剩余存储空间,单位是字节
+	}
+
+<h3 class="filesystem"> getMd5 </h3>
+
+	getMd5(options)
+
+**功能描述：**
+
+将本地文件以POST方式上传至指定URL
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+key | string | 文件索引
+
+- 返回的data参数说明
+
+
+	{ 
+		{
+			paras: //请求参数
+		}, 
+		md5: "" //文件MD5值
+	}
+
+<h3 class="filesystem"> unzip </h3>
+
+	unzip(options)
+
+**功能描述：**
+
+用unzip解压文件，如果遇到同名文件自动覆盖
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+key | string | 文件索引
+
+- 返回的data参数说明
+
+
+	{ 
+		{
+			paras: //请求参数
+		}, 
+		files: [] //解压出来的文件全路径列表
+	}
+
+<h3 class="filesystem"> read </h3>
+
+	read(options)
+
+**功能描述：**
+
+读取txt文件中的内容以JSON类型(如果不能以JSON形式返回则返回string)返回
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+onsuccess | function(data){} | 操作成功，操作成功，返回的 data 是目标URL返回的结果
+onfail | function(err){} | 操作失败，返回错误对象。包括errorCode和错误信息errMsg
+key | string | 文件索引
+
+- 返回的data参数说明
+
+
+	{ 
+		{
+			paras: //请求参数
+		}, 
+		data:"" //以文本读取方式获取到的字符串
+	} 
+
 
 ## Geolocation ##
     Blend.device.geolocation
@@ -1861,3 +2091,163 @@ type | number | 扫描对象类型
         </tr>
     </tbody>
 </table>
+
+## Database ##
+
+	Blend.device.database
+
+为webapp提供大规模数据，文件存储的功能
+
+**方法：**
+
+- set(options)
+- get(options)
+- remove(options)
+- clear(options)
+
+<h3 class="database"> set </h3>
+
+	set(options)
+	
+**功能描述：**
+
+设置存储的值
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+key | string | 需要存储数据的key值
+value| string | 需要存储数据的value值
+filedata | int | 默认为0，0 表示普通数据，不会添加到拦截器列表，1表示会添加到拦截列表(供离线缓存拦截使用)
+onsuccess | function(data){}  | 调用成功的回调函数,返回data对象
+onfail | function(err){}  | 调用失败的回调函数，返回错误对象，包含错误码errorCode和错误信息errMsg
+
+
+**返回data对象说明：**
+	
+	{
+		paras:{...}	// paras是调用时传入的参数			
+	}
+
+
+<h3 class="database"> get </h3>
+
+	get(options)
+	
+**功能描述：**
+
+如key存在则输出对应的JSON，如果key不存在则输出" "
+
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+key | string | 需要获取数据的key值
+filedata | int | 默认为0，0 表示普通数据，1表示从拦截列表中获取
+onsuccess | function(data){}  | 调用成功的回调函数,返回data对象
+onfail | function(err){}  | 调用失败的回调函数，返回错误对象，包含错误码errorCode和错误信息errMsg
+
+**返回data对象说明：**
+	
+	{
+		paras:{...},	// paras 是调用时传入的参数
+		value: "xxx"	// key 对应的value
+	} 
+	
+
+
+<h3 class="database"> remove </h3>
+
+	remove(options)
+	
+**功能描述：**
+
+删除一个数据对象，只能删除本域下的数据
+
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+key | string | 需要删除数据对象的key值
+filedata | int | 默认为0，0 表示普通数据，1表示删除拦截列表中的key-value
+onsuccess | function(data){}  | 调用成功的回调函数,返回data对象
+onfail | function(err){}  | 调用失败的回调函数，返回错误对象，包含错误码errorCode和错误信息errMsg
+
+**返回data对象说明：**
+	
+	{
+		paras:{...}	// paras 是调用时传入的参数
+	} 
+	
+
+<h3 class="database"> clear </h3>
+
+	clear(options)
+	
+**功能描述：**
+
+清除该域下所有的数据对象
+
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+filedata | int | 默认为0，0 表示普通数据，1表示拦截列表中的数据
+onsuccess | function(data){}  | 调用成功的回调函数,返回data对象
+onfail | function(err){}  | 调用失败的回调函数，返回错误对象，包含错误码errorCode和错误信息errMsg
+
+**返回data对象说明：**
+	
+	{
+		paras:{...}	// paras 是调用时传入的参数
+	} 
+	
+
+
+
+## Interceptor ##
+
+	Blend.device.interceptor
+
+拦截器
+
+**方法：**
+
+- set(options)
+
+<h3 class="interceptor"> set </h3>
+
+	set(options)
+	
+**功能描述：**
+
+开启拦截器，访问拦截器列表中已有资源时会使用本地缓存，如果关闭则不使用缓存
+
+**参数说明：**
+
+- options : 为 object 类型，其中包含以下参数：
+
+参数 | 类型 | 描述
+------------ | ------------- | ------------
+status | int | 0表示关闭，1表示打开
+onsuccess | function(data){}  | 调用成功的回调函数,返回data对象
+onfail | function(err){}  | 调用失败的回调函数，返回错误对象，包含错误码errorCode和错误信息errMsg
+
+
+**返回data对象说明：**
+	
+	{
+		paras:{...}	// paras是调用时传入的参数			
+	}

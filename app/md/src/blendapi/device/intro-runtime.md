@@ -20,4 +20,5 @@
 - 本地媒体功能（Media）
 - 设备通知 (Notification)
 - 二维码（QRCode）
-- 截屏分享 （Screen）
+- 截屏分享 （Screen)
+-    拦截器（Interceptor）

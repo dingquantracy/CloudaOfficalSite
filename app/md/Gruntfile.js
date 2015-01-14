@@ -25,7 +25,9 @@ module.exports = function(grunt) {
               "<%=pkg.device%>media.md",
               "<%=pkg.device%>notification.md",
               "<%=pkg.device%>qr.md",
-              "<%=pkg.device%>screen.md "
+              "<%=pkg.device%>screen.md",
+              "<%=pkg.device%>database.md",
+              "<%=pkg.device%>interceptor.md"
             ],
             dest: 'blendapi/local/api_runtime.md'
           }]
