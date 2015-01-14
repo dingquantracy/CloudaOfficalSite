@@ -21,13 +21,14 @@ module.exports = function(grunt) {
               "<%=pkg.device%>geolocation.md",
               "<%=pkg.device%>globalization.md",
               "<%=pkg.device%>gyroscope.md",
-              "<%=pkg.device%>keybord.md",
+              // "<%=pkg.device%>keybord.md",
               "<%=pkg.device%>media.md",
               "<%=pkg.device%>notification.md",
               "<%=pkg.device%>qr.md",
               "<%=pkg.device%>screen.md",
               "<%=pkg.device%>database.md",
-              "<%=pkg.device%>interceptor.md"
+              "<%=pkg.device%>interceptor.md",
+              // "<%=pkg.device%>cache.md"
             ],
             dest: 'blendapi/local/api_runtime.md'
           }]
@@ -46,7 +47,6 @@ module.exports = function(grunt) {
               "<%=pkg.mbass%>player.md",
               "<%=pkg.mbass%>tts.md",
               "<%=pkg.mbass%>vtt.md",
-	            "<%=pkg.mbass%>cache.md"
             ],
             dest: 'blendapi/cloud/api_runtime.md'
           }] 
