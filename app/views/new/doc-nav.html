@@ -56,20 +56,20 @@
     
 
         
-        <dl {% if (proj === "blendui" && mod==="introduction")||proj === "blend" %}class="blend-cur"{% endif %}>
+      <!--   <dl {% if (proj === "blendui" && mod==="introduction")||proj === "blend" %}class="blend-cur"{% endif %}>
             <div class="doc-part doc-part-blend">
             <dt><a>序言</a></dt>
             <dd><a href="/blend/introduction/introduction">快速入门</a></dd>
             <dd><a href="/blendui/introduction/get_api_key">获取API Key</a></dd>
-            <!-- <dd><a href="/blendapi/product">生成Module</a></dd> -->
             <dd><a href="/blendui/introduction/get_help">获取支持</a></dd>
             </div>
-        </dl> 
+        </dl>  -->
 
         {# BlendUI #}
-        <dl {% if proj === "blendui" && mod ==="get_started" %}class="blend-cur"{% endif %}>
+        <dl {% if proj === "blendui" && mod ==="get_started" || proj === "blendui" && mod ==="introduction" %}class="blend-cur"{% endif %}>
             <div class="doc-part doc-part-blend">
-            <dt><a>开始学习BlenUI</a></dt>
+            <dt><a>开始学习</a></dt>
+            <dd><a href="/blendui/introduction/introduction">快速入门</a></dd>
             <dd><a href="/blendui/get_started/define_event">自定义事件</a></dd>
             <!-- <dd><a href="/blendui/get_started/deploy">文件部署</a></dd> -->
             <dd><a href="/blendui/get_started/layer_communicate">页面间通信</a></dd>
@@ -79,8 +79,10 @@
             <dd><a href="/blendui/get_started/powerpoint">幻灯片</a></dd>
             <dd><a href="/blendui/get_started/tabs">Tabs</a></dd>
             <dd><a href="/blendui/get_started/refresh">下拉刷新</a></dd>
+            <dd><a href="/blendui/introduction/get_api_key">获取API Key</a></dd>
             <dd><a href="/blendui/get_started/test">应用调试</a></dd>
             <dd><a href="/blendui/get_started/publish">打包发布</a></dd>
+            <dd><a href="/blendui/introduction/get_help">获取支持</a></dd>
             </div>
         </dl>
 
