@@ -43,11 +43,11 @@
 
 打开所下载的`eclipse`并切换到`logcat`面板查看日志，在js中使用`console.log`，`console.error`来打印log，这些log会显示在`eclipse`的`logcat`面板中。
 
-## IOS
+## iOS
 
-### 下载IOS Project
+### 下载iOS Project
 
-IOS需要下载一个Xcode的工程，在工程中调试BlendUI应用，Xcode工程下载地址如下：
+iOS需要下载一个Xcode的工程，在工程中调试BlendUI应用，Xcode工程下载地址如下：
 
 
 

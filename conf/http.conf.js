@@ -88,6 +88,9 @@ rapid.config.define({
 			url:/^\/sample(\/)?$/i,
 			doAction:"sample"
 		},{
+			url:/^\/history(\/.*)?$/i,
+			doAction:"history"
+		},{
 			url : /^\/$/,
 			doAction : "index"
 		},{

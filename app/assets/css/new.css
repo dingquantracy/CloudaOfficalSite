@@ -46,6 +46,29 @@ section.clouda-message-wrapper{
 	color:#fff;
 }
 
+.module-versions span{
+	margin-right: 5px;
+}
+
+.module-versions span em{
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.module-versions span a{
+	color:#fff;
+}
+
+.module-versions span a:hover{
+	text-decoration: underline;
+}
+
+.module-versions span sup{
+	color:rgb(253, 41, 65);
+	font-weight: bold;
+	font-style: italic;
+}
 .demo-show{
 	float: left;
 	margin-left: 25px;
@@ -87,7 +110,7 @@ section.clouda-message-wrapper{
 	color: #fff;
 	width: 9px;
     padding-left: 13px;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 .qrcode-show{
