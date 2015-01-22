@@ -522,6 +522,7 @@ options是一个对象，其中包括以下参数：
 - insert(data, options)
 - update(contact, data, options)
 - remove(contact, options)
+- chooseContact(options)
 
 <h3 class="contact"> find</h3>
 
@@ -764,7 +765,7 @@ options是一个对象，其中包括以下参数：
     </tbody>
 </table>
 
-<h3 class="count"> count</h3>
+<h3 class="contact"> count</h3>
 
     count(options)
 
@@ -776,7 +777,7 @@ options是一个对象，其中包括以下参数：
 
 options: 为object，参数说明同find(field, options)中的options说明。
 
-<h3 class="count"> getCursor</h3>
+<h3 class="contact"> getCursor</h3>
 
     getCursor(field, cursorOffset, length， options)
 
@@ -792,7 +793,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - options：
    参数说明同find(field, options)中的options说明。
 
-<h3 class="count"> insert</h3>
+<h3 class="contact"> insert</h3>
 
     insert(data, options)
 
@@ -805,7 +806,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - data： find(field, options)接口中返回的“Contact对象”中的data信息。
 - options：参数说明同clouda.device.contact.find(field, options)中的options说明。
 
-<h3 class="count"> update</h3>
+<h3 class="contact"> update</h3>
 
     update(contact, data, options)
 
@@ -819,7 +820,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - data： find(field, options)接口中返回的Contact对象中的data信息。
 - options：参数说明同clouda.device.contact.find(field, options)中的options说明。
 
-<h3 class="count"> remove</h3>
+<h3 class="contact"> remove</h3>
 
     remove(contact, options)
 
@@ -831,6 +832,41 @@ options: 为object，参数说明同find(field, options)中的options说明。
 
 - contact： 为 array 类型，即 find(field, options)接口中所返回的Contact对象中的参数所组成的数组
 - options：参数说明同find(field, options)中的options说明。
+
+<h3 class="contact">chooseContact</h3>
+
+	chooseContact(options)
+
+**功能描述：**
+
+从手机通讯录选择某个联系人，返回联系人信息
+
+**参数说明：**
+-	options为object，其中包括以下参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <th>参数</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td>function(data){}</td>           
+            <td>操作成功，data是返回的是选取的联系人信息对象</td>  
+        </tr>
+        <tr>
+            <td>onfail</td>
+            <td>function(err){}</td>          
+            <td>操作失败，返回错误码</td>  
+        </tr>
+    <tbody>
+</table>
+
+
+
+
 
 
 ## Device ##
@@ -1561,6 +1597,7 @@ onfail | function(err){} | 操作失败，返回错误码信息
 - startProgress(title, msg, options)
 - updateProgress(value)
 - stopProgress()
+- smsVrification(options)
 
 <h3 class="notification"> alert</h3>
 
@@ -1869,6 +1906,65 @@ onfail | function(err){} | 操作失败，返回错误码信息
 **功能描述：**
 
 关闭进度显示
+
+
+
+<h3 class="notification">smsVrification</h3>
+
+	smsVrification(options)
+	
+**功能描述：**
+
+短信拦截，更具关键字和长度等自动获取验证码
+
+**参数说明：**
+
+-	options是一个object，具体包含的参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+   <tbody>
+    <tr>
+        <th>参数</th>
+        <th>类型</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>onsuccess</td>
+        <td>function(data){}</td>          
+        <td>操作成功，返回获取的短信内容对象data</td>  
+    </tr>
+    <tr>
+        <td>onfail</td>
+        <td>function(err){}</td>          
+        <td>操作失败，返回错误码</td>  
+    </tr>
+     <tr>
+        <td>keyWord</td>
+        <td>string</td>          
+        <td>短信验证码关键字，如"来自支付宝"</td>  
+    </tr>
+     <tr>
+        <td>dataType</td>
+        <td>string</td>          
+        <td>验证码类型，目前仅支持 "int"</td>  
+    </tr>
+     <tr>
+        <td>dataLength</td>
+        <td>int</td>          
+        <td>验证码长度</td>  
+    </tr>
+    </tbody>
+</table>
+
+**data对象说明：**
+	
+	{
+		vrification:"555779"，
+		keyWord:"来自支付宝"
+	}
+
+	
+
 
 
 ## QRCode ##

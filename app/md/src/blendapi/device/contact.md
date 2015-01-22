@@ -254,7 +254,7 @@
     </tbody>
 </table>
 
-<h3 class="count"> count</h3>
+<h3 class="contact"> count</h3>
 
     count(options)
 
@@ -266,7 +266,7 @@
 
 options: 为object，参数说明同find(field, options)中的options说明。
 
-<h3 class="count"> getCursor</h3>
+<h3 class="contact"> getCursor</h3>
 
     getCursor(field, cursorOffset, length， options)
 
@@ -282,7 +282,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - options：
    参数说明同find(field, options)中的options说明。
 
-<h3 class="count"> insert</h3>
+<h3 class="contact"> insert</h3>
 
     insert(data, options)
 
@@ -295,7 +295,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - data： find(field, options)接口中返回的“Contact对象”中的data信息。
 - options：参数说明同clouda.device.contact.find(field, options)中的options说明。
 
-<h3 class="count"> update</h3>
+<h3 class="contact"> update</h3>
 
     update(contact, data, options)
 
@@ -309,7 +309,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - data： find(field, options)接口中返回的Contact对象中的data信息。
 - options：参数说明同clouda.device.contact.find(field, options)中的options说明。
 
-<h3 class="count"> remove</h3>
+<h3 class="contact"> remove</h3>
 
     remove(contact, options)
 
@@ -322,7 +322,7 @@ options: 为object，参数说明同find(field, options)中的options说明。
 - contact： 为 array 类型，即 find(field, options)接口中所返回的Contact对象中的参数所组成的数组
 - options：参数说明同find(field, options)中的options说明。
 
-<h3 class="count">chooseContact</h3>
+<h3 class="contact">chooseContact</h3>
 
 	chooseContact(options)
 
