@@ -11,6 +11,7 @@
 - insert(data, options)
 - update(contact, data, options)
 - remove(contact, options)
+- chooseContact(options)
 
 <h3 class="contact"> find</h3>
 
@@ -320,3 +321,38 @@ options: 为object，参数说明同find(field, options)中的options说明。
 
 - contact： 为 array 类型，即 find(field, options)接口中所返回的Contact对象中的参数所组成的数组
 - options：参数说明同find(field, options)中的options说明。
+
+<h3 class="count">chooseContact</h3>
+
+	chooseContact(options)
+
+**功能描述：**
+
+从手机通讯录选择某个联系人，返回联系人信息
+
+**参数说明：**
+-	options为object，其中包括以下参数：
+
+<table style="border-style: solid; border-width: 0pt;" border="1" cellspacing="0" cellpadding="5px">
+    <tbody>
+        <tr>
+            <th>参数</th>
+            <th>类型</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td>function(data){}</td>           
+            <td>操作成功，data是返回的是选取的联系人信息对象</td>  
+        </tr>
+        <tr>
+            <td>onfail</td>
+            <td>function(err){}</td>          
+            <td>操作失败，返回错误码</td>  
+        </tr>
+    <tbody>
+</table>
+
+
+
+
