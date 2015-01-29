@@ -21,7 +21,7 @@
 
 首先您需要选择Runtime的集成方案，Native和Remote中的一种，选择好集成方案后下载相应的Jar包，现在地址如下：
 
-<http://bcs.duapp.com/runtimesdk/2_2/Baidu_Runtime_Android_2.2.0.rar>
+<http://blend001.duapp.com/runtime/Baidu_Runtime_Android_2.2.0.rar>
 
 该链接下载的是一个rar包，包括了Runtime以及插件所需要的Jar包，结构如下：
 	
