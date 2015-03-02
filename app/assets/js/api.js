@@ -76,7 +76,13 @@ document.addEventListener("DOMContentLoaded", function(){
 				li.appendChild(a);
 				a.addEventListener("click", function(e){
 					e.preventDefault();
-					var offset = document.querySelector("#" + id).offsetTop;
+					var offset;
+					try{
+						offset = document.querySelector("#" + id).offsetTop;
+					}catch(e){
+						offset = document.querySelector("h2[id='"+id+"']").offsetTop;
+					}
+					
 					// window.scrollTo(0,offset);
 					//window.scrollTo(0,offset-115);
 					window.scrollTo(0,offset-39);

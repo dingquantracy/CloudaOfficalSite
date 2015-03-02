@@ -115,7 +115,7 @@
 
         <dl>
             <div class="doc-part doc-part-blend">
-            <dd><a href="http://hybrid.baidu.com/beta" target="_blank">》打包平台</a></dd>
+            <dd><a href="http://hybrid.baidu.com/runtime" target="_blank">》打包平台</a></dd>
             </div>
         </dl>
 
@@ -124,11 +124,13 @@
 
     {% if proj === "runtime" %}
         {# Runtime #}
-        <dl {% if doc === "introduce" ||doc === "get_api_key"  %}class="runtime-cur"{% endif %}>
+        <dl {% if doc === "introduce" ||doc === "get_api_key" ||doc === "runtime_word" ||doc === "runtime_quick_start"  %}class="runtime-cur"{% endif %}>
         <div class="doc-part doc-part-runtime">
         <dt><a>序言</a></dt>
         <dd><a href="/runtime/introduction/introduce">简介</a></dd>
+        <dd><a href="/runtime/introduction/runtime_word">名词解释</a></dd>
         <dd><a href="/runtime/introduction/get_api_key">如何获取API Key</a></dd>
+        <dd><a href="/runtime/introduction/runtime_quick_start">快速体验 Runtime</a></dd>
         </div>
         </dl>
         <dl {% if doc === "runtime"|| doc === "runtime_integration"||doc === "senor_runtime" %}class="runtime-cur"{% endif %}>
@@ -157,7 +159,7 @@
             <dd><a href="/runtime/dabao/started">在线轻应用打包</a></dd>
             <dd><a href="/runtime/dabao/started_local">本地上传资源打包</a></dd>
             <dd><a href="/runtime/dabao/faq">FAQ</a></dd>
-            <dd><a href="http://hybrid.baidu.com/beta" target="_blank">》打包平台</a></dd>
+            <dd><a href="http://hybrid.baidu.com/runtime" target="_blank">》打包平台</a></dd>
         </div>
         </dl>
     {% endif %}
